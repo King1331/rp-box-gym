@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Clase reutilizable para efecto Glassmorphism */
+@layer components {
+  .glass {
+    @apply backdrop-blur-md bg-white/5 border border-gray-800 rounded-2xl;
+  }
+}
