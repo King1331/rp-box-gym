@@ -19,4 +19,59 @@ body {
   .glass {
     @apply backdrop-blur-md bg-white/5 border border-gray-800 rounded-2xl;
   }
+
+  /* Hero Backdrop - Solo con clases Tailwind en el JSX */
+  .hero-backdrop {
+    @apply relative h-96 bg-cover bg-center;
+  }
+
+  /* Topbar */
+  .topbar {
+    @apply flex justify-between items-center px-4 py-4 relative z-10;
+  }
+
+  /* Logo */
+  .wordmark {
+    @apply text-2xl font-black tracking-tight text-white no-underline;
+  }
+
+  .wordmark span {
+    @apply text-yellow-400;
+  }
+
+  /* Icon Button */
+  .icon-btn {
+    @apply relative w-10 h-10 rounded-full bg-white/10 border border-white/20 cursor-pointer flex items-center justify-center transition active:scale-95 text-white;
+  }
+
+  /* Notification Dot */
+  .notification-dot {
+    @apply absolute top-1 right-1 w-2 h-2 bg-yellow-400 rounded-full border-2 border-black;
+  }
+
+  /* Hero Copy */
+  .hero-copy {
+    @apply px-4 pb-8 relative z-10;
+  }
+
+  .eyebrow {
+    @apply text-xs text-white/50 font-semibold uppercase tracking-widest mb-2;
+  }
+
+  .hero-copy h1 {
+    @apply text-4xl font-black leading-tight text-white mb-2;
+  }
+
+  .hero-copy h1 em {
+    @apply text-yellow-400 not-italic;
+  }
+
+  .hero-sub {
+    @apply text-sm text-white/70 mt-2;
+  }
+
+  /* Glass Card */
+  .glass-card {
+    @apply bg-white/5 border border-white/10 backdrop-blur-md rounded-xl p-5 transition active:scale-95;
+  }
 }
