@@ -10,23 +10,17 @@
   "background_color": "#000000",
   "icons": [
     {
-      "src": "https://i.postimg.cc/8PkzTt75/415732cf-506d-4c1a-9729-e5a3ab33fef2.jpg",
-      "sizes": "192x192",
-      "type": "image/jpeg",
-      "purpose": "any"
-    },
-    {
-      "src": "https://i.postimg.cc/8PkzTt75/415732cf-506d-4c1a-9729-e5a3ab33fef2.jpg",
+      "src": "https://postimg.cc/cv4SRVvm",
       "sizes": "512x512",
-      "type": "image/jpeg",
+      "type": "image/png",
       "purpose": "any"
     }
   ],
   "screenshots": [
     {
-      "src": "https://i.postimg.cc/8PkzTt75/415732cf-506d-4c1a-9729-e5a3ab33fef2.jpg",
+      "src": "https://postimg.cc/cv4SRVvm",
       "sizes": "540x720",
-      "type": "image/jpeg",
+      "type": "image/png",
       "form_factor": "narrow"
     }
   ]
