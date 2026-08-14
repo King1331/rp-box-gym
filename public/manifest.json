@@ -1,0 +1,33 @@
+{
+  "name": "RP Box",
+  "short_name": "RP Box",
+  "description": "Aplicación de Gym - Gestiona tus entrenamientos",
+  "display": "fullscreen",
+  "orientation": "portrait-primary",
+  "start_url": "/",
+  "scope": "/",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "icons": [
+    {
+      "src": "https://i.postimg.cc/8PkzTt75/415732cf-506d-4c1a-9729-e5a3ab33fef2.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "https://i.postimg.cc/8PkzTt75/415732cf-506d-4c1a-9729-e5a3ab33fef2.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://i.postimg.cc/8PkzTt75/415732cf-506d-4c1a-9729-e5a3ab33fef2.jpg",
+      "sizes": "540x720",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    }
+  ]
+}
