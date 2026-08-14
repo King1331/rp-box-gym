@@ -59,7 +59,8 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   inset: 0 0 auto;
   height: 390px;
-  background: #090909 url('https://i.postimg.cc/rsbCyvyb/pexels-franklin-santillan-a-551795305-18986400.jpg') center 15% / cover no-repeat;
+  /* Cambia la URL externa por la ruta local */
+  background: #090909 url('/images/hero-bg.jpg') center 15% / cover no-repeat;
   background-blend-mode: luminosity;
   opacity: .56;
   filter: grayscale(1) brightness(1.08) contrast(1.18);
