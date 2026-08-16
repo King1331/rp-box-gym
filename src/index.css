@@ -60,7 +60,7 @@ a { color: inherit; text-decoration: none; }
   inset: 0 0 auto;
   height: 390px;
   /* Cambia la URL externa por la ruta local */
-  background: #090909 url('/images/Atleta.jpg') center 15% / cover no-repeat;
+  background: #090909 url('/images/atleta2.jpg') center 15% / cover no-repeat;
   background-blend-mode: luminosity;
   opacity: .56;
   filter: grayscale(1) brightness(1.08) contrast(1.18);
