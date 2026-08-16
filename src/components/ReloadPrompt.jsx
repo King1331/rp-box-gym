@@ -18,11 +18,15 @@ export function ReloadPrompt() {
     setNeedRefresh(false);
   };
 
-  // Si no hay actualización pendiente, no renderiza nada
   if (!needRefresh) return null;
 
   return (
-    <div className="fixed top-6 right-5 z-50 max-w-sm rounded-3xl bg-[rgba(20,20,20,0.85)] backdrop-blur-xl p-5 text-white shadow-2xl border border-white/10 animate-pulse">
+    <div 
+      className="fixed left-4 right-4 mx-auto sm:left-auto sm:right-5 sm:mx-0 z-50 max-w-sm rounded-3xl bg-[rgba(20,20,20,0.85)] backdrop-blur-xl p-5 text-white shadow-2xl border border-white/10 animate-pulse"
+      style={{
+        top: 'calc(env(safe-area-inset-top, 0px) + 16px)'
+      }}
+    >
       {/* Línea decorativa inferior */}
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-b-3xl" />
       
