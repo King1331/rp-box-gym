@@ -11,7 +11,7 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({ 
-      registerType: 'autoUpdate',
+      registerType: 'prompt', // <-- Cambiado a 'prompt'
       manifest: false, 
       workbox: {
         // Añadimos jpg, jpeg y webp para que la imagen del hero se guarde offline

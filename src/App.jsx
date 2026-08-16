@@ -7,6 +7,7 @@ import RoutineScreen from '@/screens/RoutineScreen';
 import ProgressScreen from '@/screens/ProgressScreen';
 import StaffScreen from '@/screens/StaffScreen';
 import NotificationsModal from '@/components/NotificationsModal';
+import { ReloadPrompt } from '@/components/ReloadPrompt'; 
 import useNotifications from '@/hooks/useNotifications';
 
 function Router() {
@@ -23,6 +24,7 @@ function Router() {
       </Switch>
 
       {isOpen && <NotificationsModal onClose={close} />}
+      <ReloadPrompt />
     </AppShell>
   );
 }
