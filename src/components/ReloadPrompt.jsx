@@ -7,7 +7,19 @@ export function ReloadPrompt() {
     updateServiceWorker,
   } = useRegisterSW({
     onRegistered(r) {
-      console.log('SW Registered:', r);
+      if (!r) return;
+
+      // 1. Revisar actualizaciones periódicamente cada 60 segundos mientras la app está abierta
+      setInterval(() => {
+        r.update();
+      }, 60 * 1000);
+
+      // 2. Revisar inmediatamente si el usuario vuelve a la app (cambia de pestaña o desminimiza)
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+          r.update();
+        }
+      });
     },
     onRegisterError(error) {
       console.error('SW registration error', error);
@@ -18,7 +30,7 @@ export function ReloadPrompt() {
     setNeedRefresh(false);
   };
 
-  if (!needRefresh) return null;
+  if (!needRefresh) return null; 
 
   return (
     <div 
