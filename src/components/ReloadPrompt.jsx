@@ -22,14 +22,14 @@ export function ReloadPrompt() {
   if (!needRefresh) return null;
 
   return (
-    <div className="fixed bottom-6 right-5 z-50 max-w-sm rounded-3xl bg-[rgba(20,20,20,0.85)] backdrop-blur-xl p-5 text-white shadow-2xl border border-white/10 animate-pulse">
+    <div className="fixed top-6 right-5 z-50 max-w-sm rounded-3xl bg-[rgba(20,20,20,0.85)] backdrop-blur-xl p-5 text-white shadow-2xl border border-white/10 animate-pulse">
       {/* Línea decorativa inferior */}
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-b-3xl" />
       
       <div className="relative">
         {/* Icono + Título */}
         <div className="mb-3 flex items-center gap-2">
-          <span className="text-lg">⚡</span>
+          <span className="text-lg text-white">⚡</span>
           <div className="text-sm font-black uppercase tracking-wide">
             Nueva versión disponible
           </div>
