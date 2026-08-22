@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
   { href: '/', label: 'Inicio', icon: HomeIcon },
-  { href: '/routine', label: 'Rutina', icon: Dumbbell },
+  { href: '/rutinas', label: 'Rutina', icon: Dumbbell },
   { href: '/progress', label: 'Progreso', icon: TrendingUp },
   { href: '/staff', label: 'Staff', icon: UsersRound },
 ];
@@ -45,17 +45,25 @@ export default function AppShell({ children, onNotifications }) {
       </main>
 
       <nav className="bottom-nav" aria-label="Navegación principal">
-        {navItems.map(({ href, label, icon: Icon }) => (
-          <Link
-            href={href}
-            className={cn('nav-item', location === href && 'active')}
-            data-testid={`link-nav-${label.toLowerCase()}`}
-            key={href}
-          >
-            <Icon size={19} strokeWidth={location === href ? 2.5 : 1.8} />
-            <span>{label}</span>
-          </Link>
-        ))}
+        {navItems.map(({ href, label, icon: Icon }) => {
+          
+          // Verifica si la ruta actual coincide con el botón, o si estamos en una sub-pantalla de Rutinas para mantener el ícono activo
+          const isItemActive = 
+            location === href || 
+            (href === '/rutinas' && (location === '/routine' || location === '/crear-rutina'));
+
+          return (
+            <Link
+              href={href}
+              className={cn('nav-item', isItemActive && 'active')}
+              data-testid={`link-nav-${label.toLowerCase()}`}
+              key={href}
+            >
+              <Icon size={19} strokeWidth={isItemActive ? 2.5 : 1.8} />
+              <span>{label}</span>
+            </Link>
+          );
+        })}
       </nav>
     </div>
   );

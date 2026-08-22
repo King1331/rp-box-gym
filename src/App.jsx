@@ -10,6 +10,11 @@ import NotificationsModal from '@/components/NotificationsModal';
 import { ReloadPrompt } from '@/components/ReloadPrompt'; 
 import useNotifications from '@/hooks/useNotifications';
 
+// --- RUTINAS ---
+import RoutineSelector from '@/screens/RoutineSelector';
+import RoutineCreator from '@/screens/RoutineCreator';
+// ------------------------
+
 function Router() {
   const { isOpen, open, close } = useNotifications();
 
@@ -17,9 +22,16 @@ function Router() {
     <AppShell onNotifications={open}>
       <Switch>
         <Route path="/" component={HomeScreen} />
+        
+        {/* --- SECCIÓN DE RUTINAS --- */}
+        <Route path="/rutinas" component={RoutineSelector} /> 
+        <Route path="/crear-rutina" component={RoutineCreator} />
+        {/* -------------------- */}
+
         <Route path="/routine" component={RoutineScreen} />
         <Route path="/progress" component={ProgressScreen} />
         <Route path="/staff" component={StaffScreen} />
+        
         <Route component={HomeScreen} />
       </Switch>
 
